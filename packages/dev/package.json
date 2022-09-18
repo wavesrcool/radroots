@@ -15,7 +15,7 @@
     "url": "https://github.com/wavesrcool/radroots.git"
   },
   "type": "commonjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "bin": {
     "radroots-ci-collect-exports": "lib/bin/radroots-ci-collect-exports.js"
   },
