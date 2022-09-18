@@ -12,6 +12,10 @@ export const RadrootsAsyncPromiseCatch = async (
   at?: string
 ): Promise<boolean> => {
   try {
+    if (!error) {
+      return false;
+    }
+
     console.log(`[radroots-async] Error: ${String(error)}.\n`);
     console.log(`\n[radroots-async] At: ${at}.`);
     return true;
