@@ -1,0 +1,36 @@
+{
+  "author": "Tyson Lupul <tyson@radroots.org>",
+  "bugs": "https://github.com/wavesrcool/radroots/issues",
+  "homepage": "https://github.com/wavesrcool/radroots#readme",
+  "license": "MIT",
+  "name": "root",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wavesrcool/radroots.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --stream",
+    "lint": "eslint --ext=.ts packages --fix",
+    "lint:all": "lerna run lint --stream --parallel",
+    "test": "yarn jest --coverage"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/jest": "^28.1.8",
+    "@types/node": "^18.7.14",
+    "@wavesrcool/dev": "^0.1.0",
+    "husky": "^8.0.1",
+    "jest": "^28.0.0",
+    "lerna": "^5.1.8",
+    "lint-staged": "^13.0.3",
+    "ts-jest": "^28.0.8",
+    "ts-node": "^10.9.1"
+  },
+  "resolutions": {
+    "typescript": "^4.8.3"
+  }
+}
