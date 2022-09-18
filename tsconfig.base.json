@@ -7,7 +7,6 @@
     "paths": {
       "@radroots/dev": ["dev/src"],
       "@radroots/library": ["library/src"],
-      "@radroots/logging": ["logging/src"],
     },
   }
  }

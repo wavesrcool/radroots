@@ -12,7 +12,7 @@ export const collectExports = (
 };
 
 type TypeScopes = "@radroots";
-type TypePackages = "library" | "dev" | "logging";
+type TypePackages = "library" | "dev" | "async";
 type TypePackagesMap = {
   package: TypePackages;
   license: TypeLicenses;
@@ -21,7 +21,7 @@ type TypePackagesMap = {
 type TypeLicenses = "MIT" | "UNLICENSED";
 
 const scopes: TypeScopes[] = ["@radroots"];
-const packages: TypePackages[] = ["library", "dev", "logging"];
+const packages: TypePackages[] = ["library", "dev", "async"];
 
 const packagesMap: TypePackagesMap = [
   {
@@ -30,9 +30,9 @@ const packagesMap: TypePackagesMap = [
     root: "RadrootsLibrary",
   },
   {
-    package: "logging",
+    package: "async",
     license: "MIT",
-    root: "RadrootsLogging",
+    root: "RadrootsAsync",
   },
   { package: "dev", license: "MIT", root: "" },
 ];
@@ -116,7 +116,7 @@ const RadrootsLibraryTypes = `${root}Types`;
 const RadrootsLibraryReference = `${root}Reference`;
 
 // @radroots/library
-const RadrootsLogging = `${root}`;
+const RadrootsAsync = `${root}`;
 
 collectExports("src", (err, matches) => {
   if (err) {
@@ -240,10 +240,10 @@ collectExports("src", (err, matches) => {
 
       //
       //
-      // @radroots/logging - collapse
-      if (name.slice(0, RadrootsLogging.length) === RadrootsLogging) {
+      // @radroots/async - collapse
+      if (name.slice(0, RadrootsAsync.length) === RadrootsAsync) {
         const exportName = name;
-        const exportAs = name.slice(RadrootsLogging.length);
+        const exportAs = name.slice(RadrootsAsync.length);
         exportMapPrimary = { exportName, exportAs };
         writableExportsList = [exportMapPrimary];
       }

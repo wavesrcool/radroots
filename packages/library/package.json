@@ -40,16 +40,17 @@
     "0l": "rm -rf lib",
     "0t": "rm -f tsconfig*tsbuildinfo",
     "c": "yarn 0l && yarn 0t && tsc --project tsconfig.build.json",
-    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0 --fix",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=10 --fix",
     "radroots-ci-collect-exports": "radroots-ci-collect-exports -s=@radroots -p=library",
     "build": "yarn lint && yarn radroots-ci-collect-exports && yarn c",
     "prepack": "yarn build",
     "test": "yarn jest"
   },
   "devDependencies": {
+    "@radroots/dev": "^0.1.1",
     "@wavesrcool/dev": "latest"
   },
   "dependencies": {
-    "@radroots/dev": "^0.1.1"
+    "@radroots/async": "^0.1.1"
   }
 }
