@@ -15,7 +15,7 @@
     "url": "https://github.com/wavesrcool/radroots.git"
   },
   "type": "commonjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -50,6 +50,6 @@
     "@wavesrcool/dev": "latest"
   },
   "dependencies": {
-    "@radroots/dev": "^0.1.0"
+    "@radroots/dev": "^0.1.1"
   }
 }
