@@ -1,3 +1,3 @@
 # @radroots/async
 
-Collection of async callbacks for Radroots libraries and applications
+A collection of async callbacks for Radroots libraries

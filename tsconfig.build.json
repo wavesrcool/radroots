@@ -4,6 +4,8 @@
   },
   "files": [],
   "references": [
+    { "path": "./packages/async/tsconfig.build.json" },
+    { "path": "./packages/async/tsconfig.spec.json" },
     { "path": "./packages/dev/tsconfig.build.json" },
     { "path": "./packages/dev/tsconfig.spec.json" },
     { "path": "./packages/library/tsconfig.build.json" },

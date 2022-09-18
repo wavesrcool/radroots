@@ -3,7 +3,7 @@
   "bugs": "https://github.com/wavesrcool/radroots/issues",
   "homepage": "https://github.com/wavesrcool/radroots/tree/main/packages/async#readme",
   "contributors": [],
-  "description": "Collection of async callbacks for Radroots libraries and applications",
+  "description": "A collection of async callbacks for Radroots libraries",
   "engines": {
     "node": ">=14.0.0"
   },
@@ -24,7 +24,7 @@
   "keywords": [
     "radroots",
     "async",
-    "utilities",
+    "callback",
     "library",
     "mobile",
     "web",

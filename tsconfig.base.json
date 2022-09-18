@@ -5,6 +5,7 @@
     "declaration": true,
     "declarationMap": true,
     "paths": {
+      "@radroots/async": ["dev/async"],
       "@radroots/dev": ["dev/src"],
       "@radroots/library": ["library/src"],
     },
