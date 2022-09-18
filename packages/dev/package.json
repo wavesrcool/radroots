@@ -17,7 +17,8 @@
   "type": "commonjs",
   "version": "0.0.1",
   "bin": {
-    "radroots-ci-collect-exports": "lib/bin/radroots-ci-collect-exports.js"
+    "radroots-ci-collect-exports": "lib/bin/radroots-ci-collect-exports.js",
+    "radroots-run-environment-checks": "lib/bin/radroots-run-environment-checks.js"
   },
   "files": [
     "./lib"
@@ -56,5 +57,6 @@
   "dependencies": {
     "glob": "^8.0.3",
     "yargs": "^17.5.1"
-  }
+  },
+  "gitHead": "3cccebfd1e397818b6e1552c8164e0c94e608732"
 }
