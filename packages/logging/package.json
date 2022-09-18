@@ -30,8 +30,7 @@
     "web",
     "apps",
     "es6",
-    "node",
-    "16"
+    "node"
   ],
   "publishConfig": {
     "access": "public"
