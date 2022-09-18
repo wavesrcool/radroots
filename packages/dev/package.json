@@ -1,0 +1,60 @@
+{
+  "author": "Tyson Lupul <tyson@radroots.org>",
+  "bugs": "https://github.com/wavesrcool/radroots/issues",
+  "homepage": "https://github.com/wavesrcool/radroots/tree/main/packages/dev#readme",
+  "contributors": [],
+  "description": "Collection of developer configurations and utilities for Radroots JavaScript environments",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT",
+  "name": "@radroots/dev",
+  "repository": {
+    "directory": "packages/dev",
+    "type": "git",
+    "url": "https://github.com/wavesrcool/radroots.git"
+  },
+  "type": "commonjs",
+  "version": "0.0.0",
+  "bin": {
+    "radroots-ci-collect-exports": "lib/bin/radroots-ci-collect-exports.js"
+  },
+  "files": [
+    "./lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "w": "tsc -w",
+    "0l": "rm -rf lib",
+    "0t": "rm -f tsconfig*tsbuildinfo",
+    "c": "yarn 0l && yarn 0t && tsc --project tsconfig.build.json",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0 --fix",
+    "build": "yarn lint && yarn c && yarn executable-bins",
+    "prepack": "yarn build",
+    "test": "yarn jest",
+    "executable-bins": "chmod u+x ./lib/bin/*.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/yargs": "^17.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "glob": "^8.0.3",
+    "yargs": "^17.5.1"
+  }
+}

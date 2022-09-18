@@ -4,5 +4,8 @@
     "composite": true,
     "declaration": true,
     "declarationMap": true,
+    "paths": {
+      "@radroots/dev": ["dev/src"],
+    },
   }
  }
