@@ -23,6 +23,18 @@
   "files": [
     "./lib"
   ],
+  "keywords": [
+    "radroots",
+    "dev",
+    "configuration",
+    "utilities",
+    "javascript",
+    "environment",
+    "web",
+    "apps",
+    "es6",
+    "node"
+  ],
   "publishConfig": {
     "access": "public"
   },
