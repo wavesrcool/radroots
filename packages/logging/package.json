@@ -15,7 +15,7 @@
     "url": "https://github.com/wavesrcool/radroots.git"
   },
   "type": "commonjs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -48,7 +48,7 @@
     "test": "yarn jest"
   },
   "devDependencies": {
-    "@wavesrcool/dev": "latest",
-    "@radroots/dev": "^0.0.3"
+    "@radroots/dev": "^0.1.0",
+    "@wavesrcool/dev": "latest"
   }
 }
