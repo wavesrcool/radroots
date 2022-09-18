@@ -1,0 +1,55 @@
+{
+  "author": "Tyson Lupul <tyson@radroots.org>",
+  "bugs": "https://github.com/wavesrcool/radroots/issues",
+  "homepage": "https://github.com/wavesrcool/radroots/tree/main/packages/library#readme",
+  "contributors": [],
+  "description": "Library of JavaScript common to Radroots packages",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT",
+  "name": "@radroots/library",
+  "repository": {
+    "directory": "packages/library",
+    "type": "git",
+    "url": "https://github.com/wavesrcool/radroots.git"
+  },
+  "type": "commonjs",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "./lib"
+  ],
+  "keywords": [
+    "radroots",
+    "library",
+    "javascript",
+    "common",
+    "mobile",
+    "web",
+    "apps",
+    "es6",
+    "node"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "w": "tsc -w",
+    "0l": "rm -rf lib",
+    "0t": "rm -f tsconfig*tsbuildinfo",
+    "c": "yarn 0l && yarn 0t && tsc --project tsconfig.build.json",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0 --fix",
+    "radroots-ci-collect-exports": "radroots-ci-collect-exports -s=@radroots -p=library",
+    "build": "yarn lint && yarn radroots-ci-collect-exports && yarn c",
+    "prepack": "yarn build",
+    "test": "yarn jest"
+  },
+  "devDependencies": {
+    "@wavesrcool/dev": "latest"
+  },
+  "dependencies": {
+    "@radroots/dev": "^0.0.3"
+  }
+}
