@@ -1851,7 +1851,7 @@
     "@typescript-eslint/types" "5.37.0"
     eslint-visitor-keys "^3.3.0"
 
-"@wavesrcool/dev@^0.1.0":
+"@wavesrcool/dev@^0.1.0", "@wavesrcool/dev@latest":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@wavesrcool/dev/-/dev-0.1.0.tgz#d077c1087ecaee59f3dce78c8c3fc0cf7074d54c"
   integrity sha512-OcKCChR5x3ogTV7aeZuOh7VXKz5Bz+QdgYZ+rHltIvIRL9vRgAm7EkcGMBMS4eiHn5UKv21R/vAX/QhlmIs+3A==

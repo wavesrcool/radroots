@@ -12,7 +12,7 @@ export const collectExports = (
 };
 
 type TypeScopes = "@radroots";
-type TypePackages = "library" | "dev";
+type TypePackages = "library" | "dev" | "logging";
 type TypePackagesMap = {
   package: TypePackages;
   license: TypeLicenses;
@@ -21,13 +21,18 @@ type TypePackagesMap = {
 type TypeLicenses = "MIT" | "UNLICENSED";
 
 const scopes: TypeScopes[] = ["@radroots"];
-const packages: TypePackages[] = ["library", "dev"];
+const packages: TypePackages[] = ["library", "dev", "logging"];
 
 const packagesMap: TypePackagesMap = [
   {
     package: "library",
     license: "MIT",
     root: "RadrootsLibrary",
+  },
+  {
+    package: "logging",
+    license: "MIT",
+    root: "RadrootsLogging",
   },
   { package: "dev", license: "MIT", root: "" },
 ];
@@ -109,6 +114,9 @@ const RadrootsLibraryFunctionsFigure = `TypesFigures${root}Functions`;
 const RadrootsLibraryFunctionsResolve = `TypesResolve${root}Functions`;
 const RadrootsLibraryTypes = `${root}Types`;
 const RadrootsLibraryReference = `${root}Reference`;
+
+// @radroots/library
+const RadrootsLogging = `${root}`;
 
 collectExports("src", (err, matches) => {
   if (err) {
@@ -226,6 +234,16 @@ collectExports("src", (err, matches) => {
         const exportAs = `Reference${name.slice(
           RadrootsLibraryReference.length
         )}`;
+        exportMapPrimary = { exportName, exportAs };
+        writableExportsList = [exportMapPrimary];
+      }
+
+      //
+      //
+      // @radroots/logging - collapse
+      if (name.slice(0, RadrootsLogging.length) === RadrootsLogging) {
+        const exportName = name;
+        const exportAs = name.slice(RadrootsLogging.length);
         exportMapPrimary = { exportName, exportAs };
         writableExportsList = [exportMapPrimary];
       }
