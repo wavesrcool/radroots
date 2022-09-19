@@ -22,7 +22,7 @@
     "@tsconfig/node16": "^1.0.3",
     "@types/jest": "^28.1.8",
     "@types/node": "^18.7.14",
-    "@wavesrcool/dev": "^0.1.0",
+    "@wavesrcool/dev": "latest",
     "husky": "^8.0.1",
     "jest": "^28.0.0",
     "lerna": "^5.1.8",
